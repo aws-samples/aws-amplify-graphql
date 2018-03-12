@@ -1,0 +1,1 @@
+$util.toJson($util.dynamodb.fromS3ObjectJson($context.source.file))

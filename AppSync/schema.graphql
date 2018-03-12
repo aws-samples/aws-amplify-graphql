@@ -1,0 +1,41 @@
+type Mutation {
+	addPicture(name: String, visibility: Visibility, file: S3ObjectInput): Picture
+}
+
+type Picture {
+	id: ID!
+	name: String
+	visibility: Visibility
+	owner: String
+	file: S3Object
+	createdAt: String
+}
+
+type Query {
+	empty: Boolean
+}
+
+type S3Object {
+	bucket: String!
+	region: String!
+	key: String!
+}
+
+input S3ObjectInput {
+	bucket: String!
+	region: String!
+	localUri: String
+	visibility: Visibility
+	key: String
+	mimeType: String
+}
+
+enum Visibility {
+	public
+	private
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}
