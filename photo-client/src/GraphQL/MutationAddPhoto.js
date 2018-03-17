@@ -11,6 +11,7 @@ mutation ($name: String, $visibility: Visibility, $file: S3ObjectInput) {
     name
     visibility
     owner
+    createdAt
     file {
       region
       bucket

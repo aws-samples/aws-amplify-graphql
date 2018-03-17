@@ -25,6 +25,7 @@ Amplify.configure(awsmobile);
 
 // AppSync client instantiation
 const client = new AWSAppSyncClient({
+  disableOffline: true,
   url: AppSync.graphqlEndpoint,
   region: AppSync.region,
   auth: {

@@ -40,7 +40,8 @@ class AddPhoto extends Component {
         const visibility = 'private';
 
         const { name, file: selectedFile } = this.state;
-        const { identityId: owner } = await Auth.currentCredentials();
+        const { identityId } = await Auth.currentCredentials();
+        const { username: owner } = await Auth.currentUserInfo();
 
         let file;
 
@@ -48,7 +49,7 @@ class AddPhoto extends Component {
             const { name: fileName, type: mimeType } = selectedFile;
             const [, , , extension] = /([^.]+)(\.(\w+))?$/.exec(fileName);
 
-            const key = `${visibility}/${owner}/${uuid()}${extension && '.'}${extension}`;
+            const key = `${visibility}/${identityId}/${uuid()}${extension && '.'}${extension}`;
 
             file = {
                 bucket,
@@ -59,7 +60,7 @@ class AddPhoto extends Component {
             };
         }
 
-        this.setState(this.getInitialState(), () => {    
+        this.setState(this.getInitialState(), () => {
             this.fileInput.value = "";
             this.props.addPhoto({ name, owner, visibility, file });
         });
@@ -86,6 +87,17 @@ export default graphql(
     {
         options: {
             refetchQueries: [{ query: QueryAllPhotos }],
+            update: (proxy, { data: { addPicture } }) => {
+                const query = QueryAllPhotos;
+                const data = proxy.readQuery({ query });
+
+                data.listPictures.items = [
+                    ...data.listPictures.items.filter((photo) => photo.id !== addPicture.id),
+                    addPicture
+                ];
+
+                proxy.writeQuery({ query, data });
+            }
         },
         props: ({ ownProps, mutate }) => ({
             ...ownProps,
@@ -94,8 +106,9 @@ export default graphql(
                 optimisticResponse: () => ({
                     addPicture: {
                         ...photo,
-                        __typename: 'Picture',
                         id: uuid(),
+                        createdAt: new Date().toISOString(),
+                        __typename: 'Picture',
                         file: null
                     }
                 }),
