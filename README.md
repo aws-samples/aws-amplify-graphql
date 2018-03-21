@@ -68,3 +68,6 @@ yarn start
 ```
 
 If the application runs successfully you should be able to enter the name of a photo, choose a file and then press **Add photo**. This will make a GraphQL call to enter the record into the database and simultaneously upload the object to S3. An immediate fetch of the record will then be at the bottom of the screen.
+
+## NOTE 
+The existing CORS configuration on the Amazon S3 bucket that is configured by awsmobile-cli has a size limit of 5MB. In order to support file uploads larger than this you need to go Amazon S3 console, open your bucket (photoclient-userfiles-mobilehub-XXXXXXXXXXX), then go to **Permissions** tab and click on **CORS Configuration**. Then inside of the CORSRule tag add this line ```<ExposeHeader>ETag</ExposeHeader>``` and click **Save**.
