@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 //Get configs
 import awsmobile from './aws-exports';
-import AppSync from './AppSync';
+import AppSync from './appsync';
 
 //AppSync and Apollo libraries
 import AWSAppSyncClient from "aws-appsync";
