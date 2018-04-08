@@ -1,0 +1,2 @@
+## Pass back the result object as is. **
+$util.toJson($ctx.result)
