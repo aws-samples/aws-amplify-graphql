@@ -1,0 +1,26 @@
+{
+  "name": "photo-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aws-amplify": "^0.2.14",
+    "aws-amplify-react": "^0.1.38",
+    "aws-appsync": "^1.0.14",
+    "aws-appsync-react": "^1.0.5",
+    "aws-sdk": "^2.177.0",
+    "graphql-tag": "^2.6.1",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "semantic-ui-css": "^2.2.14",
+    "semantic-ui-react": "^0.78.2",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
