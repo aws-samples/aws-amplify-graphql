@@ -1,0 +1,69 @@
+{
+    "dataSources": [
+        {
+            "name": "Local",
+            "description": null,
+            "type": "NONE",
+            "serviceRoleArn": "{managed-by-awsmobile-cli}"
+        },
+        {
+            "name": "PicturesTable",
+            "description": null,
+            "type": "AMAZON_DYNAMODB",
+            "serviceRoleArn": "{managed-by-awsmobile-cli}",
+            "dynamodbConfig": {
+                "tableName": "PicturesTable-{suffix}",
+                "awsRegion": "us-east-1",
+                "useCallerCredentials": false
+            }
+        }
+    ],
+    "tables": [
+        {
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "id",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "owner",
+                    "AttributeType": "S"
+                }
+            ],
+            "TableName": "PicturesTable-{suffix}",
+            "KeySchema": [
+                {
+                    "AttributeName": "id",
+                    "KeyType": "HASH"
+                }
+            ],
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 5,
+                "WriteCapacityUnits": 5
+            },
+            "GlobalSecondaryIndexes": [
+                {
+                    "IndexName": "owner-index",
+                    "KeySchema": [
+                        {
+                            "AttributeName": "owner",
+                            "KeyType": "HASH"
+                        },
+                        {
+                            "AttributeName": "id",
+                            "KeyType": "RANGE"
+                        }
+                    ],
+                    "Projection": {
+                        "ProjectionType": "ALL"
+                    },
+                    "ProvisionedThroughput": {
+                        "ReadCapacityUnits": 5,
+                        "WriteCapacityUnits": 5
+                    }
+                }
+            ],
+            "Region": "us-east-1"
+        }
+    ]
+}
