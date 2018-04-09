@@ -36,7 +36,7 @@ This sample application shows how to use GraphQL to build an application that a 
 
 7. Go back to the Schema page and on the right hand side under the **Picture** type click the **Attach** button next to the `file:S3Object` field and select the **Local** data source that you just created. For the request mapping template use the code in `./AppSync/Picture.file.request` and for the response mapping template use `./AppSync/Picture.file.response`. Press **Save** at the bottom.
 
-8. Navigate to the Schema page again and on the right hand side find `listPictures(...):[PictureConnection]` under the Query type and click the resolver to edit it.  Update the **REQUEST** mapping template with the code in `./AppSync/Query.listPictures.request`. Use "Return single item" as the response template. Press **Save** at the bottom.
+8. Navigate to the Schema page again and on the right hand side find `listPictures(...):[PictureConnection]` under the Query type and click on the resolver (**Attach** button). Select **PictureTable** as the data source and update the **REQUEST** mapping template with the code in `./AppSync/Query.listPictures.request`. Use "Return single item" as the response template. Press **Save** at the bottom.
     - This will use fine grained authorization controls to filter GraphQL responses so that users only see their data from DynamoDB.
 
 9. Now use the [awsmobile-cli](https://github.com/aws/awsmobile-cli) to create your Amazon Cognito User Pool and Identity Pool, as well as an Amazon S3 bucket with private directories to store each user's photo:
