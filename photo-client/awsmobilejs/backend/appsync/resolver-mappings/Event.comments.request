@@ -1,0 +1,15 @@
+{
+    "version": "2017-02-28",
+    "operation": "Query",
+    "index": "LSI-AppSyncCommentTable-by-eventId-createdAt",
+    "query": {
+        "expression": "eventId = :eventId",
+        "expressionValues": {
+            ":eventId": {
+                "S": "$context.source.id"
+            }
+        }
+    },
+    "limit": #if($context.arguments.limit) $context.arguments.limit #else 10 #end,
+    "nextToken": #if($context.arguments.nextToken) "$context.arguments.nextToken" #else null #end
+}

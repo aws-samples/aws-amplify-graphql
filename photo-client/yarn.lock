@@ -434,16 +434,14 @@ aws-amplify-react@^0.1.38:
   dependencies:
     qrcode.react "^0.8.0"
 
-aws-amplify@^0.2.14:
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-0.2.14.tgz#ed8fb7cfdb68ddb737c935b39723df6dc9874036"
+aws-amplify@0.2.11:
+  version "0.2.11"
+  resolved "http://localhost:4873/aws-amplify/-/aws-amplify-0.2.11.tgz#ad8627b10b478737d40638e455824a5240212294"
   dependencies:
     amazon-cognito-identity-js "^2.0.0"
     aws-sdk "2.198.0"
     axios "^0.17.0"
-    paho-mqtt "^1.0.4"
     uuid "^3.2.1"
-    zen-observable "^0.8.6"
 
 aws-appsync-react@^1.0.5:
   version "1.0.6"
@@ -5224,10 +5222,6 @@ paho-client@^1.0.1:
     node-localstorage "0.x.x"
     websocket "1.x.x"
 
-paho-mqtt@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/paho-mqtt/-/paho-mqtt-1.0.4.tgz#279822dd8ea00a961bf141f03d09c9f4339ebb79"
-
 pako@~1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
@@ -7684,7 +7678,3 @@ zen-observable-ts@^0.8.6:
 zen-observable@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
-
-zen-observable@^0.8.6:
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.8.tgz#1ea93995bf098754a58215a1e0a7309e5749ec42"

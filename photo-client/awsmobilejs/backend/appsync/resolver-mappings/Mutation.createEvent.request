@@ -1,0 +1,13 @@
+{
+    "version": "2017-02-28",
+    "operation": "PutItem",
+    "key": {
+        "id": { "S": "$util.autoId()"}
+    },
+    "attributeValues": {
+        "name": { "S": "$context.arguments.name" },
+        "where": { "S": "$context.arguments.where" },
+        "when": { "S": "$context.arguments.when" },
+        "description": { "S": "$context.arguments.description" }
+    }
+}

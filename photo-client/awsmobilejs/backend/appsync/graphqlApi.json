@@ -1,0 +1,10 @@
+{
+    "name": "photo-client-2018-04-09-15-34-33",
+    "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+    "userPoolConfig": {
+        "userPoolId": "us-east-2_9mJOD2SN1",
+        "awsRegion": "us-east-2",
+        "defaultAction": "ALLOW",
+        "appIdClientRegex": null
+    }
+}
