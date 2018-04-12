@@ -57,7 +57,7 @@ This process will configure all the per-user security settings when users regist
   - Set default action **ALLOW**
   - Click **Save**.
 
-11. On the left navigation of the AppSync console, select the root of your API (called **Pictures**) and scroll down to the bottom where **Web** is listed. Click the **Download** button and save the `appsync.js` file into the `./photo-client/src` directory.
+11. On the left navigation of the AppSync console, select the root of your API (called **Pictures**) and scroll down to the bottom where **Web** is listed. Click the **Download** button and save the `AppSync.js` file into the `./photo-client/src` directory.
 
 
 12. Finally in a terminal navigate to your cloned repo and run the application:
