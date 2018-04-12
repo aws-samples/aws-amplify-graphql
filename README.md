@@ -21,7 +21,7 @@ This sample application shows how to use GraphQL to build an application that a 
 
 2. Navigate to the [AWS AppSync Console](https://us-east-2.console.aws.amazon.com/appsync/home). Select **Create API** with a name of **Pictures**, select **Custom Schema** and click **Create**.
 
-3. Click **Schema** navigation on the left. Copy the contents of `./AppSync/schema.graphql` into the console editor and press **Save**. 
+3. Click **Schema** navigation on the left. Copy the contents of [`./AppSync/schema.graphql`](AppSync/schema.graphql) into the console editor and press **Save**. 
 
 4. Still on the Schema page, press **Create Resources** in the upper right corner.
   - Select the **Picture** type from the drop down. 
@@ -30,13 +30,13 @@ This sample application shows how to use GraphQL to build an application that a 
 
     This will create DynamoDB tables, some default queries/mutations and connect them to Resolvers
 
-5. Click the **Attach** button next to `addPicture` on the right of the schema editor and select **PictureTable** as the data source. For the request mapping template use the code in `./AppSync/Mutation.addPicture.request` and for the response mapping template select **Return single item** from the drop-down. Press **Save** at the bottom.
+5. Click the **Attach** button next to `addPicture` on the right of the schema editor and select **PictureTable** as the data source. For the request mapping template use the code in [`./AppSync/Mutation.addPicture.request`](AppSync/Mutation.addPicture.request) and for the response mapping template select **Return single item** from the drop-down. Press **Save** at the bottom.
 
 6. Click the **Data Sources** navigation on the left, select **New** and create a data source with **None** as the type with a name of **Local**. 
 
-7. Go back to the Schema page and on the right hand side under the **Picture** type click the **Attach** button next to the `file:S3Object` field and select the **Local** data source that you just created. For the request mapping template use the code in `./AppSync/Picture.file.request` and for the response mapping template use `./AppSync/Picture.file.response`. Press **Save** at the bottom.
+7. Go back to the Schema page and on the right hand side under the **Picture** type click the **Attach** button next to the `file:S3Object` field and select the **Local** data source that you just created. For the request mapping template use the code in [`./AppSync/Picture.file.request`](AppSync/Picture.file.request) and for the response mapping template use [`./AppSync/Picture.file.response`](AppSync/Picture.file.response). Press **Save** at the bottom.
 
-8. Navigate to the Schema page again and on the right hand side find `listPictures(...):[PictureConnection]` under the Query type and click on the resolver (**Attach** button). Select **PictureTable** as the data source and update the **REQUEST** mapping template with the code in `./AppSync/Query.listPictures.request`. Use "Return single item" as the response template. Press **Save** at the bottom.
+8. Navigate to the Schema page again and on the right hand side find `listPictures(...):[PictureConnection]` under the Query type and click on the resolver (**Attach** button). Select **PictureTable** as the data source and update the **REQUEST** mapping template with the code in [`./AppSync/Query.listPictures.request`](AppSync/Query.listPictures.request). Use "Return single item" as the response template. Press **Save** at the bottom.
     - This will use fine grained authorization controls to filter GraphQL responses so that users only see their data from DynamoDB.
 
 9. Now use the [awsmobile-cli](https://github.com/aws/awsmobile-cli) to create your Amazon Cognito User Pool and Identity Pool, as well as an Amazon S3 bucket with private directories to store each user's photo:
