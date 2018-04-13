@@ -5,7 +5,6 @@ import 'semantic-ui-css/semantic.min.css'
 
 //Get configs
 import awsmobile from './aws-exports';
-import AppSync from './AppSync';
 
 //AppSync and Apollo libraries
 import AWSAppSyncClient from "aws-appsync";
@@ -26,10 +25,10 @@ Amplify.configure(awsmobile);
 // AppSync client instantiation
 const client = new AWSAppSyncClient({
   disableOffline: true,
-  url: AppSync.graphqlEndpoint,
-  region: AppSync.region,
+  url: awsmobile.aws_appsync_graphqlEndpoint,
+  region: awsmobile.aws_appsync_region,
   auth: {
-    type: AppSync.authenticationType,
+    type: awsmobile.aws_appsync_authenticationType,
 
     // API_KEY
     apiKey: 'some_key',

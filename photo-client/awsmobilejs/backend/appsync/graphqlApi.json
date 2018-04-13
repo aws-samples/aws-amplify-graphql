@@ -1,0 +1,4 @@
+{
+    "name": "{managed-by-awsmobile-cli}",
+    "authenticationType": "AWS_IAM"
+}

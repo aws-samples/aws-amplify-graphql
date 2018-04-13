@@ -1,0 +1,23 @@
+[
+    {
+        "typeName": "Mutation",
+        "fieldName": "addPicture",
+        "dataSourceName": "PicturesTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.addPicture.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.addPicture.response"
+    },
+    {
+        "typeName": "Picture",
+        "fieldName": "file",
+        "dataSourceName": "Local",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Picture.file.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Picture.file.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "listPictures",
+        "dataSourceName": "PicturesTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.listPictures.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.listPictures.response"
+    }
+]

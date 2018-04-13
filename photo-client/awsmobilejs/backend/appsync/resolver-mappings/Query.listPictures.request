@@ -7,7 +7,7 @@
       "#owner": "owner",
     },
     "expressionValues": {
-      ":owner": {"S": "$util.defaultIfNull($context.identity.claims.username, $util.defaultIfNull($context.identity.username, 'ANON'))"},
+      ":owner": {"S": "${context.identity.claims.username}"},
     },
   },
   "index": "owner-index",
