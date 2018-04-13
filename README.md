@@ -51,12 +51,10 @@ awsmobile push
 7. Run your app
 - Using yarn
 ```
-yarn
 yarn start
 ```
 - Using npm
 ```
-npm install
 npm start
 ```
 
