@@ -1,5 +1,7 @@
 # AWS AppSync GraphQL Photo Sample
 
+**Please submit issues to the [appsync-sdk-js](https://github.com/awslabs/aws-mobile-appsync-sdk-js/issues) repository.**
+
 ![Demo](media/demo.gif)
 
 This sample application shows how to use GraphQL to build an application that a user can login to the system, then upload and download photos which are private to them. The sample is written in React and uses AWS AppSync, Amazon Cognito, Amazon DynamoDB and Amazon S3 as well as the AWS Mobile CLI.
