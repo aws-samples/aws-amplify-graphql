@@ -12,7 +12,7 @@ This sample application shows how to use GraphQL to build an application that a 
 
 + [NodeJS](https://nodejs.org/en/download/) with [NPM](https://docs.npmjs.com/getting-started/installing-node)
 
-+ [AWS Mobile CLI](https://github.com/aws/awsmobile-cli)
++ [AWS Mobile CLI v1.1.0](https://github.com/aws/awsmobile-cli)
   - `npm install -g awsmobile-cli`
   - awsmobile configure aws 
     - Configure your access and secret keys of your aws account that has AppSync permissions (or AdminAccess) and your preferred region. 
