@@ -31,5 +31,5 @@ features:
     attributes:
       enabled: true
       wildcard-cors-policy: true
-name: photo-client-2018-04-09-15-34-33
-region: us-east-2
+name: photo-client
+region: us-east-1
