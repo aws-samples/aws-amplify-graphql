@@ -35,29 +35,21 @@ cd ./photo-client
 awsmobile init --yes
 ```
 
-4. Copy **Amazon Cognito User Pool** ID that is stored on  ```./src/aws-exports.js``` file. Copy the value for 'aws_user_pools_id' constant (without quotes).
-
-5. Configure **Amazon Cognito User Pool** as authentication type
+4. Configure **Amazon Cognito User Pool** as authentication type
 ```
 awsmobile appsync configure
 ```
 - Select **AMAZON_COGNITO_USER_POOLS**
-- Paste the User Pool ID that you copied on the previous step
-- Select the region of the User Pool
+- Confirm defaults
 
-6. Update changes
+5. Update changes
 ```
 awsmobile push
 ```
 
-7. Run your app
-- Using yarn
+6. Run your app
 ```
-yarn start
-```
-- Using npm
-```
-npm start
+awsmobile run
 ```
 
 The awsmobile-cli will create your Amazon Cognito User Pool and Identity Pool, an Amazon S3 bucket with private directories to store each user's photo and an AWS AppSync API that uses Amazon DynamoDB to store data. 
