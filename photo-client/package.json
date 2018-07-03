@@ -5,7 +5,7 @@
   "dependencies": {
     "aws-amplify": "^0.3.0",
     "aws-amplify-react": "^0.1.39",
-    "aws-appsync": "^1.0.14",
+    "aws-appsync": "^1.0.23",
     "aws-appsync-react": "^1.0.5",
     "aws-sdk": "^2.177.0",
     "graphql-tag": "^2.6.1",
