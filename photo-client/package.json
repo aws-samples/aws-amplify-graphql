@@ -7,7 +7,6 @@
     "aws-amplify-react": "^0.1.39",
     "aws-appsync": "^1.0.23",
     "aws-appsync-react": "^1.0.5",
-    "aws-sdk": "^2.177.0",
     "graphql-tag": "^2.6.1",
     "react": "^16.2.0",
     "react-apollo": "^2.0.4",
