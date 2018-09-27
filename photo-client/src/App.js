@@ -44,11 +44,6 @@ const client = new AWSAppSyncClient({
 
 class App extends Component {
 
-  async componentWillMount() {
-    client.initQueryManager();
-    await client.resetStore();
-  }
-  
   render() {
     return (
       <div className="App">
