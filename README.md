@@ -15,7 +15,7 @@ This sample application shows how to use GraphQL to build an application that a 
 
 + [NodeJS](https://nodejs.org/en/download/) with [NPM](https://docs.npmjs.com/getting-started/installing-node)
 
-+ [AWS Mobile CLI v1.1.0](https://github.com/aws/awsmobile-cli)
++ [AWS Ampify CLI](https://aws-amplify.github.io/)
   - `npm install -g @aws-amplify/cli`
   - `amplify configure` 
 
@@ -61,8 +61,7 @@ amplify add api
 
 ![Architecture](public/amplify-add-api.png)
 
-After running this command, you edit the schema.graphql located at `amplify/backend/api/<-projectname->/schema.graphql`. You may
-delete the one at the root of the project directory as it will no longer be used.
+> After running this command, you edit the schema.graphql located at `amplify/backend/api/<-projectname->/schema.graphql`. You may delete the one at the root of the project directory as it will no longer be used.
 
 6. Deploy your project.
 
