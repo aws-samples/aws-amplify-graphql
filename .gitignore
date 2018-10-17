@@ -3,6 +3,7 @@ aws-info.json
 project-info.json
 aws-exports.js
 amplify
+.amplifyrc
 
 
 # Created by https://www.gitignore.io/api/node
