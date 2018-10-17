@@ -50,7 +50,6 @@ class AddPhoto extends Component {
             const [, , , extension] = /([^.]+)(\.(\w+))?$/.exec(fileName);
 
             const key = `${visibility}/${identityId}/${uuid()}${extension && '.'}${extension}`;
-            console.log(`Saving to key: ${key}`)
 
             file = {
                 bucket,
