@@ -1,0 +1,19 @@
+type Picture @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  name: String
+  owner: String
+  visibility: Visibility
+  file: S3Object
+  createdAt: String
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
+
+enum Visibility {
+  public
+  private
+}
