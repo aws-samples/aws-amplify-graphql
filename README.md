@@ -67,6 +67,9 @@ amplify add api
 
 ```
 amplify push
+
+# When asked if you would like to generate client code, you can
+# say no since we are using plain JavaScript.
 ```
 
 7. Install client dependencies.
@@ -75,13 +78,16 @@ amplify push
 npm install
 
 # or
-yarn install
+yarn
 ```
 
 8. Run the react application
 
 ```
 npm run start
+
+# or
+yarn start
 ```
 
 The AWS Amplify CLI will create an Amazon Cognito User Pool and Identity Pool, an Amazon S3 bucket with private directories to store each user's photo and an AWS AppSync API that uses Amazon DynamoDB to store data.
