@@ -24,8 +24,8 @@ This sample application shows how to use GraphQL to build an application that a 
 1. Clone this repo locally.
 
 ```
-cd my-project
-git clone https://github.com/aws-samples/aws-amplify-graphql.git .
+git clone https://github.com/aws-samples/aws-amplify-graphql.git
+cd aws-amplify-graphql
 ```
 
 2. Initialize the amplify project.
