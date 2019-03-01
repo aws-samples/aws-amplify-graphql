@@ -8,6 +8,8 @@
     "aws-amplify-react": "^2.0.7",
     "aws-appsync": "^1.4.0",
     "aws-appsync-react": "^1.2.0",
+    "aws4": "^1.8.0",
+    "axios": "^0.18.0",
     "graphql-tag": "^2.10.0",
     "react": "^16.5.2",
     "react-apollo": "^2.2.4",
