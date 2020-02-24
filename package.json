@@ -12,7 +12,7 @@
     "react": "^16.5.2",
     "react-apollo": "^2.2.4",
     "react-dom": "^16.5.2",
-    "react-scripts": "^2.0.5",
+    "react-scripts": "^3.4.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.82.5",
     "uuid": "^3.3.2"
